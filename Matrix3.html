@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca por Fruta</title>
+</head>
+<body>
+    <script>
+        // Array de nomes de frutas
+        var frutas = ["maçã", "banana", "abacaxi", "laranja", "uva"];
+        var busca = "abacaxi";
+
+        // Realizar a busca
+        var encontrado = false;
+        for (var i = 0; i < frutas.length; i++) {
+            if (frutas[i] === busca) {
+                encontrado = true;
+                break;
+            }
+        }
+
+        // Usar switch/case para exibir resultado
+        switch (encontrado) {
+            case true:
+                document.write("A fruta foi encontrada.");
+                break;
+            case false:
+                document.write("A fruta não foi encontrada.");
+                break;
+        }
+    </script>
+</body>
+</html>
