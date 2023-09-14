@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca com Tratamento de Erro</title>
+</head>
+<body>
+    <script>
+        // Função de busca que retorna false se a palavra não for encontrada
+        function buscaPalavra(palavras, palavraBuscada) {
+            for (var i = 0; i < palavras.length; i++) {
+                if (palavras[i] === palavraBuscada) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var frutas = ["maçã", "banana", "laranja", "uva"];
+        var busca = "abacaxi";
+
+        try {
+            if (!buscaPalavra(frutas, busca)) {
+                throw new Error("A fruta não foi encontrada na lista.");
+            }
+            document.write("A fruta foi encontrada.");
+        } catch (error) {
+            document.write(error.message);
+        }
+    </script>
+</body>
+</html>
