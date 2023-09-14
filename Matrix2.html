@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenar em Ordem Decrescente</title>
+</head>
+<body>
+    <script>
+        // Array de números desordenados
+        var numeros = [5, 2, 8, 1, 9];
+
+        // Ordenar os números em ordem decrescente
+        numeros.sort(function(a, b) {
+            return b - a;
+        });
+
+        // Exibir os números ordenados
+        var i = 0;
+        while (i < numeros.length) {
+            document.write(numeros[i] + "<br>");
+            i++;
+        }
+    </script>
+</body>
+</html>
